@@ -59,7 +59,37 @@ To serve the server on the specified port and service can be enabled.
 > sudo firewall-cmd --reload
 
 To validate server, from the browser using the localhost or publicIP.
+![apche-1](https://user-images.githubusercontent.com/38424194/149841014-8667abd5-1f4d-4340-a8bd-30b8b2532623.PNG)
 
+## Nodejs and npm Installation commands from ubuntu repository
 
+Run the following command to update the packages and install Nodejs and npm.
 
+>sudo apt update
+
+>sudo apt install nodejs npm
+
+it can install all the packages to complie and install native addons from npm.
+
+To verify the installation by running:
+
+> nodejs --version
+
+## Mongodb instllation
+
+Run the following command to update the repositoty and pacakges with latest chanes and install MongoDb with the following commands.
+
+> sudo apt update
+
+> sudo apt install mongodb* y
+
+It can install all the required packages like mongo-tools mongodb mongodb-clients mongodb-server mongodb-server-core.
+
+To check the service status
+
+> sudo systemctl status mongodb
+
+To validate the installation 
+
+> mongod --version
 
