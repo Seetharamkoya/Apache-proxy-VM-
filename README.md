@@ -58,6 +58,11 @@ To serve the server on the specified port and service can be enabled.
 
 > sudo firewall-cmd --reload
 
+To validate the installation
+> apache2 -v
+
+![APACHE](https://user-images.githubusercontent.com/38424194/149843666-9d18f939-933c-4032-9f96-c00f48d461d4.PNG)
+
 To validate server, from the browser using the localhost or publicIP.
 ![apche-1](https://user-images.githubusercontent.com/38424194/149841014-8667abd5-1f4d-4340-a8bd-30b8b2532623.PNG)
 
@@ -74,6 +79,9 @@ it can install all the packages to complie and install native addons from npm.
 To verify the installation by running:
 
 > nodejs --version
+
+![NODE](https://user-images.githubusercontent.com/38424194/149843962-c82bc057-777c-4775-87ed-59514fa8d046.PNG)
+
 
 ## Mongodb instllation
 
@@ -92,4 +100,7 @@ To check the service status
 To validate the installation 
 
 > mongod --version
+
+
+![NODE2](https://user-images.githubusercontent.com/38424194/149843986-06348da0-bad9-401c-94c1-61be3e6b6c2d.PNG)
 
