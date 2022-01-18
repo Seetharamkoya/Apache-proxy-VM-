@@ -119,9 +119,9 @@ To serve the clients from a single server for the multiple doomains by using the
 
 3. Here /var/www/html/nodejs we can run and check the status of the node application using the pm2.
 
+> pm2 status hello.js
 
-
-4. To serve the, application content on apache server So, catdefault configuration file has to be modified or copied with a new file to serve the client by changing/updating the host configurations.
+4. To serve the, application content on apache server So, the default configuration file has to be modified or copied with a new file to serve the client by changing/updating the host configurations.
 
 ![h2](https://user-images.githubusercontent.com/38424194/149848335-be659f68-f36c-41cd-8e92-daf2b5809123.PNG)
 
@@ -160,4 +160,16 @@ Now, it can server the our application on virtual host.
 > sudo openssl x509 -req -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 
 ![cert](https://user-images.githubusercontent.com/38424194/149853471-50aaea64-5901-4e5d-a857-78a5761bfee7.PNG)
+
+
+![local](https://user-images.githubusercontent.com/38424194/149929325-b8f2f8e9-5cda-45a6-b6ce-798443b86dd4.PNG)
+
+
+![http](https://user-images.githubusercontent.com/38424194/149929357-66164c62-5ff5-4d03-8aa3-3fc1276046a3.PNG)
+
+
+![https](https://user-images.githubusercontent.com/38424194/149929395-4ee71065-e75a-4a9c-ae18-a382343f1068.PNG)
+
+
+
 
