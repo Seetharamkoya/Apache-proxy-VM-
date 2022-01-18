@@ -105,7 +105,7 @@ To validate the installation
 
 ![NODE2](https://user-images.githubusercontent.com/38424194/149843986-06348da0-bad9-401c-94c1-61be3e6b6c2d.PNG)
 
-### Setting the virtual host configs on Apache 
+### protocal installation and configurations
 To serve the clients from a single server for the multiple doomains by using the default path /var/www/html or modified path in the directory.
 1. Here, I wrote a **Hello world! application in nodejs** to test our proxy request from the http to https in the virtual host with default HTTP port 8080.
 2. Give, the permissions to the file u/g/o to r/w/x.
@@ -114,7 +114,8 @@ To serve the clients from a single server for the multiple doomains by using the
 ![f1](https://user-images.githubusercontent.com/38424194/149846290-057b1a1e-26bc-452a-9fc2-fe18afe976b9.PNG)
 
 
-![f2](https://user-images.githubusercontent.com/38424194/149846310-ccc2e198-160d-41bf-b13f-c60fdabab7d2.PNG)
+![image](https://user-images.githubusercontent.com/38424194/149930866-3ecf3a7d-8067-49db-b21f-cd9072ca62ce.png)
+
 
 
 3. Here /var/www/html/nodejs we can run and check the status of the node application using the pm2.
@@ -123,18 +124,26 @@ To serve the clients from a single server for the multiple doomains by using the
 
 4. To serve the, application content on apache server So, the default configuration file has to be modified or copied with a new file to serve the client by changing/updating the host configurations.
 
-![h2](https://user-images.githubusercontent.com/38424194/149848335-be659f68-f36c-41cd-8e92-daf2b5809123.PNG)
+![image](https://user-images.githubusercontent.com/38424194/149931550-e59c6711-c26e-4fa1-947e-c43289cb6fde.png)
 
 
-![image](https://user-images.githubusercontent.com/38424194/149848957-5fc1986e-8e8a-4c0f-a4cb-b9d8294b9c9d.png)
+
+![image](https://user-images.githubusercontent.com/38424194/149931698-7d74f226-3ecb-447c-84a7-582fc39ccdae.png)
 
 
-![h3](https://user-images.githubusercontent.com/38424194/149848386-af762306-5d6f-4961-8eba-1a3c61067192.PNG)
+Here, you can see the host configaration file
+
+![image](https://user-images.githubusercontent.com/38424194/149938484-72d3683f-5a15-4b66-ad5d-85a1f45354ed.png)
+
+
+
 
 5. To enable the proxy and proxy_http
 
 > sudo a2enmod proxy
 > sudo a2enmod proxy_http
+> sudo a2enmod ssl
+> sudo a2enmod headers
 
 6. To save the changes and makes the configuration avilable to the host.
 
@@ -151,6 +160,7 @@ To serve the clients from a single server for the multiple doomains by using the
 9. To take all the changes into configuration files.
 
 > sudo systemctl restart apache2
+> 
 
 
 Now, it can server the our application on virtual host.
@@ -159,9 +169,14 @@ Now, it can server the our application on virtual host.
 
 > sudo openssl x509 -req -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 
+> sudo a2ensite default-ssl
+> sudo a2enconf ssl-params
+> sudo systemctl restart apache2
+
 ![cert](https://user-images.githubusercontent.com/38424194/149853471-50aaea64-5901-4e5d-a857-78a5761bfee7.PNG)
 
 
+Here, you can the proxy pass from http://192.168.0.19 to https://192.168.0.19 with ssl
 ![local](https://user-images.githubusercontent.com/38424194/149929325-b8f2f8e9-5cda-45a6-b6ce-798443b86dd4.PNG)
 
 
@@ -171,5 +186,12 @@ Now, it can server the our application on virtual host.
 ![https](https://user-images.githubusercontent.com/38424194/149929395-4ee71065-e75a-4a9c-ae18-a382343f1068.PNG)
 
 
+###  Ports
+Here, I used defalut port for apache localhost http://127.0.0.1:8080 for proxy pass and request to redirect to https://192.168.0.19 on port 443 with ssl certification.
+
+![image](https://user-images.githubusercontent.com/38424194/149937817-00aacb5b-2a76-4260-b9a2-19584085011b.png)
+
+
+![image](https://user-images.githubusercontent.com/38424194/149938085-7d99a5f6-d455-4971-9db0-fe921980c31f.png)
 
 
