@@ -70,10 +70,16 @@ To validate server, from the browser using the localhost or publicIP.
 ## Nodejs and npm Installation commands from ubuntu repository
 
 Run the following command to update the packages and install Nodejs and npm.
+/var/www/html/nodejs
 
 >sudo apt update
 
 >sudo apt install nodejs npm
+
+To intialise the package.jason and dependencies
+
+> npm init 
+> node hello.js or pm2 start hello.js
 
 it can install all the packages to complie and install native addons from npm.
 
