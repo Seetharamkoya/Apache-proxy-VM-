@@ -1,6 +1,7 @@
 # Apache-proxy-VM-
-Linux Apache proxy setup on Virtual Box _Ubuntu
-## Apache Installation commands  on Ubuntu 20.04
+Linux Apache proxy setup on Virtual Host in Ubuntu
+## Installation commands and config changes
+### Apache Installation commands  on Ubuntu 20.04
 Apache comeup by default in the Ubuntu default repositories and it can be possible to install using package management tools. The Appache HTTP server is most widely used server.
 
 Before. Installating we should create a user and give sudo privileges to install and configured on the server.
@@ -103,4 +104,60 @@ To validate the installation
 
 
 ![NODE2](https://user-images.githubusercontent.com/38424194/149843986-06348da0-bad9-401c-94c1-61be3e6b6c2d.PNG)
+
+### Setting the virtual host configs on Apache 
+To serve the clients from a single server for the multiple doomains by using the default path /var/www/html or modified path in the directory.
+1. Here, I wrote a **Hello world! application in nodejs** to test our proxy request from the http to https in the virtual host with default HTTP port 8080.
+2. Give, the permissions to the file u/g/o to r/w/x.
+
+
+![f1](https://user-images.githubusercontent.com/38424194/149846290-057b1a1e-26bc-452a-9fc2-fe18afe976b9.PNG)
+
+
+![f2](https://user-images.githubusercontent.com/38424194/149846310-ccc2e198-160d-41bf-b13f-c60fdabab7d2.PNG)
+
+
+3. Here /var/www/html/nodejs we can run and check the status of the node application using the pm2.
+
+
+
+4. To serve the, application content on apache server So, catdefault configuration file has to be modified or copied with a new file to serve the client by changing/updating the host configurations.
+
+![h2](https://user-images.githubusercontent.com/38424194/149848335-be659f68-f36c-41cd-8e92-daf2b5809123.PNG)
+
+
+![image](https://user-images.githubusercontent.com/38424194/149848957-5fc1986e-8e8a-4c0f-a4cb-b9d8294b9c9d.png)
+
+
+![h3](https://user-images.githubusercontent.com/38424194/149848386-af762306-5d6f-4961-8eba-1a3c61067192.PNG)
+
+5. To enable the proxy and proxy_http
+
+> sudo a2enmod proxy
+> sudo a2enmod proxy_http
+
+6. To save the changes and makes the configuration avilable to the host.
+
+> sudo a2ensite host.conf (file.conf)
+
+7. Disable the **000-default.conf** config file.
+
+> sudo a2dissite 000-default.conf
+
+8. Test the configuration errors.
+
+> sudo apache2ctl configtest
+
+9. To take all the changes into configuration files.
+
+> sudo systemctl restart apache2
+
+
+Now, it can server the our application on virtual host.
+
+### Self signed certificate with openssl
+
+> sudo openssl x509 -req -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
+
+![cert](https://user-images.githubusercontent.com/38424194/149853471-50aaea64-5901-4e5d-a857-78a5761bfee7.PNG)
 
