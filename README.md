@@ -195,7 +195,7 @@ Here, you can the proxy pass from http://192.168.0.19 to https://192.168.0.19 wi
 
 
 ###  Ports
-Here, I used defalut port for apache localhost http://127.0.0.1:8080 for proxy pass and request to redirect to https://192.168.0.19 on port 443 with ssl certification.
+Here, I used defalut port for apache localhost http://127.0.0.1:8080 for proxy pass and request to redirect to https://192.168.0.19 on port 443 with ssl protocal for (https) certification.
 
 ![image](https://user-images.githubusercontent.com/38424194/149937817-00aacb5b-2a76-4260-b9a2-19584085011b.png)
 
