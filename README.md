@@ -14,12 +14,13 @@ Before, installing any software better to update the pacakges with latest change
 > sudo apt update
 
 
-later, install apache2 pacakge and it will install all the dependencies.
+Later, install the apache2 package and it will install all the dependencies.
 
 
 > sudo apt install apache2
 
 After, the end of the installation check the server status weather it is running or not.
+
 
 > sudo systemctl status apache2
 
@@ -35,9 +36,10 @@ To stop the server.
 
 When the Configuration are changed and to use those changes into effective by reloading.
 
+
 >sudo systemctl reload apache2
 
-**To ptotect the server from the outside firewalls has to be installed and keep them in a running state with the specified port number.**
+**To protect the server from the outside, firewalls have to be installed and kept in a running state with the specified port number.**
 
 > sudo apt install firewall* -y
 
@@ -51,7 +53,7 @@ To start and enable the serviceusing.
 
 > sudo systemctl enable firewalld
 
-To serve the server on the specified port and service can be enabled.
+For serving on the specified port, with security/firewall service can be enabled.
 
 > sudo firewall-cmd --zone=public --add-port=8080/tcp --permanent
 
