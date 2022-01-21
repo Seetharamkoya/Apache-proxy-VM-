@@ -115,7 +115,7 @@ To validate the installation
 
 ### protocal of the installation and configurations
 To serve the clients from a single server for the multiple domains by using the default path /var/www/html or modified path in the directory.
-1. Here, I wrote a **Hello world! application in nodejs** to test our proxy request from the http to https in the virtual host with default HTTP port 8080.
+1. Here, I wrote a **Hello world! application in nodejs** to test and run my helloworld application in the virtual host with default HTTP port 8080.
 2. Given, the permissions to the file u/g/o to r/w/x.
 
 
