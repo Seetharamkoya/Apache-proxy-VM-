@@ -130,6 +130,8 @@ To serve the clients from a single server for the multiple domains by using the 
 
 > pm2 status hello.js
 
+### Virtual host configuration
+
 4. To serve the, application content on apache server So, the default configuration file has to be modified or copied with a new file to serve the client by changing/updating the host configurations.
 
 ![image](https://user-images.githubusercontent.com/38424194/149931550-e59c6711-c26e-4fa1-947e-c43289cb6fde.png)
