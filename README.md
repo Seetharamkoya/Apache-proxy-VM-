@@ -11,7 +11,7 @@ Here, are the list of the Commands to install and configure the Apche server.
 Before, installing any software better to update the pacakges with latest changes with.
 
 
-'sudo apt update
+>sudo apt update
 
 
 Later, install the apache2 package and it will install all the dependencies.
