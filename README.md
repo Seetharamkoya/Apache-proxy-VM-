@@ -113,7 +113,7 @@ To validate the installation
 
 ![NODE2](https://user-images.githubusercontent.com/38424194/149843986-06348da0-bad9-401c-94c1-61be3e6b6c2d.PNG)
 
-### protocal installation and configurations
+### protocal of the installation and configurations
 To serve the clients from a single server for the multiple doomains by using the default path /var/www/html or modified path in the directory.
 1. Here, I wrote a **Hello world! application in nodejs** to test our proxy request from the http to https in the virtual host with default HTTP port 8080.
 2. Give, the permissions to the file u/g/o to r/w/x.
