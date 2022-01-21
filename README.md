@@ -61,7 +61,7 @@ For serving on the specified port, with security/firewall service can be enabled
 
 > sudo firewall-cmd --reload
 
-To validate the installation
+#### To validate the installation
 > apache2 -v
 
 ![APACHE](https://user-images.githubusercontent.com/38424194/149843666-9d18f939-933c-4032-9f96-c00f48d461d4.PNG)
@@ -114,9 +114,9 @@ To validate the installation
 ![NODE2](https://user-images.githubusercontent.com/38424194/149843986-06348da0-bad9-401c-94c1-61be3e6b6c2d.PNG)
 
 ### protocal of the installation and configurations
-To serve the clients from a single server for the multiple doomains by using the default path /var/www/html or modified path in the directory.
+To serve the clients from a single server for the multiple domains by using the default path /var/www/html or modified path in the directory.
 1. Here, I wrote a **Hello world! application in nodejs** to test our proxy request from the http to https in the virtual host with default HTTP port 8080.
-2. Give, the permissions to the file u/g/o to r/w/x.
+2. Given, the permissions to the file u/g/o to r/w/x.
 
 
 ![f1](https://user-images.githubusercontent.com/38424194/149846290-057b1a1e-26bc-452a-9fc2-fe18afe976b9.PNG)
@@ -124,9 +124,9 @@ To serve the clients from a single server for the multiple doomains by using the
 
 ![image](https://user-images.githubusercontent.com/38424194/149930866-3ecf3a7d-8067-49db-b21f-cd9072ca62ce.png)
 
+### NOdejs dependences are installed in the same directory.
 
-
-3. Here /var/www/html/nodejs we can run and check the status of the node application using the pm2.
+3. Here /var/www/html/nodejs we can run and check the status and for running the node application using the pm2.
 
 > pm2 status hello.js
 
