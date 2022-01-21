@@ -178,7 +178,9 @@ Now, it can server the our application on virtual host.
 > sudo openssl x509 -req -nodes -days 365 -newkey rsa:2048 -keyout /etc/ssl/private/apache-selfsigned.key -out /etc/ssl/certs/apache-selfsigned.crt
 
 > sudo a2ensite default-ssl
+
 > sudo a2enconf ssl-params
+
 > sudo systemctl restart apache2
 
 ![cert](https://user-images.githubusercontent.com/38424194/149853471-50aaea64-5901-4e5d-a857-78a5761bfee7.PNG)
